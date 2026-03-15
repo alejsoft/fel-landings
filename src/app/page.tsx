@@ -5,6 +5,7 @@ import Compatibility from "@/components/Compatibility";
 import BigNumber from "@/components/BigNumber";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { config } from "@/config";
 
 const softwareSchema = {
@@ -59,6 +60,7 @@ export default function Home() {
       <BigNumber />
       <FAQ />
       <CTA />
+      <WhatsAppButton />
     </main>
   );
 }

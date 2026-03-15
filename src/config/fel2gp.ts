@@ -1,7 +1,7 @@
 import type { ProductConfig } from "./types";
 
 export const config: ProductConfig = {
-  product: "FEL2GP",
+  product: "Fel2GP",
   domain: "fel2gp.com",
   erp: "Dynamics GP",
   accentColor: "#0B71C7",
@@ -54,7 +54,7 @@ export const config: ProductConfig = {
   ],
   bigNumbers: [
     { number: "0", label: "facturas digitadas manualmente" },
-    { number: "2–4", label: "semanas de implementación" },
+    { number: "4–8", label: "semanas de implementación" },
   ],
   cta: {
     headline: "¿Usas Dynamics GP en Guatemala?",
@@ -64,7 +64,7 @@ export const config: ProductConfig = {
       "Hola, uso Dynamics GP y me interesa automatizar las facturas de compra de la SAT.",
   },
   seo: {
-    title: "Facturas SAT → Dynamics GP Automático | FEL2GP",
+    title: "Facturas SAT → Dynamics GP Automático | Fel2GP",
     description:
       "Automatiza el registro de facturas de compra de la SAT Guatemala en Microsoft Dynamics GP vía eConnect. Compatible con GP 2016 y 2018. Cero digitación.",
     keywords: [
@@ -99,7 +99,7 @@ export const config: ProductConfig = {
     },
     {
       q: "¿Cuánto tiempo toma implementarlo?",
-      a: "Entre 2 y 4 semanas dependiendo de la configuración de eConnect en tu ambiente.",
+      a: "Entre 4 y 8 semanas dependiendo de la configuración de eConnect en tu ambiente.",
     },
   ],
 };

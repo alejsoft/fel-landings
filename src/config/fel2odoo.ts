@@ -1,7 +1,7 @@
 import type { ProductConfig } from "./types";
 
 export const config: ProductConfig = {
-  product: "FEL2ODOO",
+  product: "Fel2Odoo",
   domain: "fel2odoo.com",
   erp: "Odoo",
   accentColor: "#714B67",
@@ -55,7 +55,7 @@ export const config: ProductConfig = {
   ],
   bigNumbers: [
     { number: "0", label: "facturas digitadas manualmente" },
-    { number: "1–3", label: "semanas de implementación" },
+    { number: "4–8", label: "semanas de implementación" },
   ],
   cta: {
     headline: "¿Usas Odoo en Guatemala?",
@@ -65,7 +65,7 @@ export const config: ProductConfig = {
       "Hola, uso Odoo y me interesa automatizar las facturas de compra de la SAT.",
   },
   seo: {
-    title: "Facturas SAT → Odoo Automático | FEL2ODOO",
+    title: "Facturas SAT → Odoo Automático | Fel2Odoo",
     description:
       "Automatiza el registro de facturas de compra de la SAT Guatemala en Odoo. Compatible con v15, v16, v17 y v18. Vendor Bills automáticos, cero digitación.",
     keywords: [
@@ -100,7 +100,7 @@ export const config: ProductConfig = {
     },
     {
       q: "¿Cuánto tiempo toma implementarlo?",
-      a: "Entre 1 y 3 semanas dependiendo de la versión y la complejidad del mapeo de productos.",
+      a: "Entre 4 y 8 semanas dependiendo de la versión y la complejidad del mapeo de productos.",
     },
   ],
 };

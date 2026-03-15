@@ -17,7 +17,7 @@ export default function Problem() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-12">
           {config.problems.map((problem, i) => (
             <FadeIn key={problem.title} className={`delay-${(i + 1) * 100}`}>
-              <p className="text-5xl font-semibold text-accent/20 mb-6">
+              <p className="text-5xl font-semibold text-accent/60 mb-6">
                 0{i + 1}
               </p>
               <h3 className="text-xl font-semibold mb-3">{problem.title}</h3>

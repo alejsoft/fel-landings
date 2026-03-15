@@ -1,7 +1,7 @@
 import type { ProductConfig } from "./types";
 
 export const config: ProductConfig = {
-  product: "FEL2SAP",
+  product: "Fel2SAP",
   domain: "fel2sap.com",
   erp: "SAP",
   accentColor: "#0070F3",
@@ -56,7 +56,7 @@ export const config: ProductConfig = {
   ],
   bigNumbers: [
     { number: "0", label: "facturas digitadas manualmente" },
-    { number: "2–4", label: "semanas de implementación" },
+    { number: "4–8", label: "semanas de implementación" },
   ],
   cta: {
     headline: "¿Usas SAP en Guatemala?",
@@ -66,9 +66,9 @@ export const config: ProductConfig = {
       "Hola, uso SAP y me interesa automatizar las facturas de compra de la SAT.",
   },
   seo: {
-    title: "Facturas SAT → SAP Automático | FEL2SAP",
+    title: "Facturas SAT → SAP Automático | Fel2SAP",
     description:
-      "Automatiza el registro de facturas de compra de la SAT Guatemala en SAP Business One, S/4HANA y ECC. Cero digitación manual, cero errores. Implementación en 2-4 semanas.",
+      "Automatiza el registro de facturas de compra de la SAT Guatemala en SAP Business One, S/4HANA y ECC. Cero digitación manual, cero errores. Implementación en 4-8 semanas.",
     keywords: [
       "integración SAT SAP Guatemala",
       "automatizar facturas SAP",
@@ -100,7 +100,7 @@ export const config: ProductConfig = {
     },
     {
       q: "¿Cuánto tiempo toma implementarlo?",
-      a: "Entre 2 y 4 semanas dependiendo de la versión de SAP y la complejidad del mapeo contable.",
+      a: "Entre 4 y 8 semanas dependiendo de la versión de SAP y la complejidad del mapeo contable.",
     },
   ],
 };

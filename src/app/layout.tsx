@@ -12,6 +12,8 @@ export const metadata: Metadata = {
   title: config.seo.title,
   description: config.seo.description,
   keywords: config.seo.keywords,
+  authors: [{ name: "HaaB Technologies, S.A.", url: "https://haab.gt" }],
+  publisher: "HaaB Technologies, S.A.",
   alternates: {
     canonical: `https://${config.domain}`,
   },
