@@ -1,5 +1,12 @@
+"use client";
+
+import dynamic from "next/dynamic";
 import { config } from "@/config";
-import FlujoFEL from "./FlujoFEL";
+
+const FlujoFEL = dynamic(() => import("./FlujoFEL"), {
+  ssr: false,
+  loading: () => <div style={{ width: 360, height: 490 }} />,
+});
 
 export default function Hero() {
   return (
