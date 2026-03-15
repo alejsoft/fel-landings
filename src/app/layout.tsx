@@ -90,7 +90,10 @@ export default function RootLayout({
         {children}
 
         {/* Minimal footer */}
-        <footer className="px-6 sm:px-8 py-12 text-center">
+        <footer className="px-6 sm:px-8 py-12 flex flex-col items-center gap-3">
+          <a href="/articulos" className="text-sm text-muted hover:text-foreground transition-colors">
+            Artículos
+          </a>
           <p className="text-sm text-muted">
             &copy; {new Date().getFullYear()} HaaB Technologies, S.A.
           </p>
