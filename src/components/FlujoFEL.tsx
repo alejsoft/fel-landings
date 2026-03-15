@@ -136,8 +136,8 @@ function HaabNode({ delay, x, y }: { delay: number; x: number; y: number }) {
           }}
           transition={{ delay: delay + 0.5, duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
         >
-          <img src="/icon-192.png" alt="HaaB" className="w-full h-full object-cover dark:hidden" />
-          <img src="/icon-192-dark.png" alt="HaaB" className="w-full h-full object-cover hidden dark:block" />
+          <img src="/icon-192.webp" alt="HaaB" className="w-full h-full object-cover dark:hidden" />
+          <img src="/icon-192-dark.webp" alt="HaaB" className="w-full h-full object-cover hidden dark:block" />
         </motion.div>
         <span className="font-mono text-[0.6rem] tracking-wide text-green-600 dark:text-green-400 font-semibold">
           HaaB

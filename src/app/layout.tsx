@@ -66,14 +66,14 @@ export default function RootLayout({
         <header className="fixed top-0 left-0 right-0 z-50 px-6 sm:px-8 h-16 flex items-center justify-between backdrop-blur-xl bg-background/80">
           <div className="flex items-center gap-3">
             <Image
-              src="/haab-light.png"
+              src="/haab-light.webp"
               alt="HaaB"
               width={24}
               height={24}
               className="rounded-sm dark:hidden"
             />
             <Image
-              src="/haab-dark.png"
+              src="/haab-dark.webp"
               alt=""
               width={24}
               height={24}
