@@ -5,7 +5,7 @@ import { config } from "@/config";
 
 const FlujoFEL = dynamic(() => import("./FlujoFEL"), {
   ssr: false,
-  loading: () => <div style={{ width: 360, height: 490 }} />,
+  loading: () => <div className="w-[270px] h-[368px] sm:w-[306px] sm:h-[417px] lg:w-[360px] lg:h-[490px]" />,
 });
 
 export default function Hero() {
@@ -57,8 +57,10 @@ export default function Hero() {
 
           {/* Right column — Flow animation */}
           <div className="flex items-center justify-center flex-shrink-0">
-            <div className="scale-[0.75] sm:scale-[0.85] lg:scale-100 origin-top">
-              <FlujoFEL />
+            <div className="w-[270px] h-[368px] sm:w-[306px] sm:h-[417px] lg:w-[360px] lg:h-[490px]">
+              <div className="scale-[0.75] sm:scale-[0.85] lg:scale-100 origin-top-left">
+                <FlujoFEL />
+              </div>
             </div>
           </div>
         </div>
