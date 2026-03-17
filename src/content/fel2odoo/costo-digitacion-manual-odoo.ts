@@ -7,10 +7,10 @@ export const article: Article = {
   description:
     "Análisis del costo real de digitar facturas de proveedores manualmente en Odoo: tiempo perdido, errores en Vendor Bills y atrasos en cierres contables.",
   keywords: [
-    "costo digitación facturas Odoo",
-    "automatizar facturas compra Odoo",
+    "costo digitación facturas de compras Odoo",
+    "automatizar facturas de compras Odoo",
     "Vendor Bills manual Odoo",
-    "errores digitación facturas Odoo Guatemala",
+    "errores digitación facturas de compras Odoo Guatemala",
   ],
   publishedDate: "2026-03-14",
   sections: [

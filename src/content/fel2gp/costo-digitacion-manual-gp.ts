@@ -5,12 +5,12 @@ export const article: Article = {
   product: "fel2gp",
   title: "Cuánto le cuesta a tu empresa digitar facturas de compra en Dynamics GP",
   description:
-    "Análisis del costo real de digitar facturas de proveedores manualmente en Microsoft Dynamics GP: tiempo, errores y atrasos en cierres contables.",
+    "Análisis del costo real de digitar facturas de comprasde proveedores manualmente en Microsoft Dynamics GP: tiempo, errores y atrasos en cierres contables.",
   keywords: [
-    "costo digitación facturas Dynamics GP",
-    "automatizar facturas compra GP",
+    "costo digitación facturas de compras Dynamics GP",
+    "automatizar facturas de compras GP",
     "Payables Transaction manual GP",
-    "errores digitación facturas Guatemala",
+    "errores digitación facturas de compras Guatemala",
   ],
   publishedDate: "2026-03-14",
   sections: [
@@ -40,13 +40,13 @@ Cada error genera retrabajo: buscar la transacción, hacer un void, re-registrar
     },
     {
       heading: "El costo en cierre contable",
-      body: `El cierre mensual se atrasa cuando hay facturas pendientes de registro. En empresas con volumen alto de compras, es común llegar al cierre con 50 o 100 facturas sin registrar en GP.
+      body: `El cierre mensual se atrasa cuando hay facturas de compras pendientes de registro. En empresas con volumen alto de compras, es común llegar al cierre con 50 o 100 facturas sin registrar en GP.
 
 El equipo contable trabaja horas extra los últimos días del mes para ponerse al día. Esto no solo tiene costo en horas, sino en calidad de vida del equipo.`,
     },
     {
       heading: "La alternativa: registro automático",
-      body: `Con HaaB Fel2GP, cada factura de compra que tus proveedores emiten a tu NIT se registra automáticamente en Dynamics GP. Sin descarga manual de XML, sin digitación, sin errores.
+      body: `Con HaaB Fel2GP, cada factura de compras que tus proveedores emiten a tu NIT se registra automáticamente en Dynamics GP. Sin descarga manual de XML, sin digitación, sin errores.
 
 La Payables Transaction se crea con todas sus líneas, IVA correcto y GL Distribution configurada. Tu equipo solo revisa y aprueba.
 

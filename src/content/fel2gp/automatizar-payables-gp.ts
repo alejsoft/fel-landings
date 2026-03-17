@@ -8,7 +8,7 @@ export const article: Article = {
     "Guía técnica de cómo funciona la automatización de Payables Transactions en Microsoft Dynamics GP conectando directamente con la SAT de Guatemala vía eConnect.",
   keywords: [
     "automatizar Payables Transaction Dynamics GP",
-    "eConnect facturas SAT Guatemala",
+    "eConnect facturas de compras SAT Guatemala",
     "integración SAT Dynamics GP",
     "registro automático compras GP",
   ],
@@ -18,13 +18,13 @@ export const article: Article = {
       heading: "El flujo actual: SAT → Excel → GP",
       body: `Hoy, la mayoría de empresas en Guatemala que usan Dynamics GP siguen un flujo manual para registrar facturas de compra:
 
-1. Entrar al portal de la SAT y descargar los XML de facturas recibidas
+1. Entrar al portal de la SAT y descargar los XML de facturas de compras recibidas
 2. Abrir cada XML y extraer los datos en un Excel
 3. Abrir Dynamics GP → Payables Transaction Entry
 4. Digitar proveedor, monto, IVA, distribución contable
 5. Guardar y pasar al siguiente
 
-Este flujo tiene sentido cuando recibes 10 facturas al mes. Deja de tener sentido cuando recibes 100 o más.`,
+Este flujo tiene sentido cuando recibes 10 facturas de compras al mes. Deja de tener sentido cuando recibes 100 o más.`,
     },
     {
       heading: "El flujo automatizado: SAT → HaaB → GP",

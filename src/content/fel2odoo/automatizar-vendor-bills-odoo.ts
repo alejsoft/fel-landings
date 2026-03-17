@@ -18,13 +18,13 @@ export const article: Article = {
       heading: "El flujo actual: SAT → Excel → Odoo",
       body: `El flujo típico en empresas guatemaltecas con Odoo:
 
-1. Entrar al portal SAT y descargar XML de facturas recibidas
+1. Entrar al portal SAT y descargar XML de facturas de compras recibidas
 2. Abrir cada XML, extraer datos relevantes
 3. En Odoo: Contabilidad → Vendor Bills → Crear
 4. Buscar proveedor, agregar líneas de producto, asignar impuestos
 5. Confirmar y repetir
 
-Con 10 facturas al mes es manejable. Con 100 o más, el equipo contable vive digitando en vez de analizando.`,
+Con 10 facturas de compras al mes es manejable. Con 100 o más, el equipo contable vive digitando en vez de analizando.`,
     },
     {
       heading: "El flujo automatizado: SAT → HaaB → Odoo",

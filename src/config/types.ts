@@ -3,6 +3,7 @@ export type ProductConfig = {
   domain: string;
   erp: string;
   accentColor: string;
+  ogImage: string;
   hero: {
     headline: string;
     highlight: string;

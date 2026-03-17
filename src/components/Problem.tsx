@@ -10,7 +10,7 @@ export default function Problem() {
             El problema
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight max-w-3xl mb-20">
-            Tu equipo no debería digitar facturas.
+            Tu equipo no debería digitar facturas de compras.
           </h2>
         </FadeIn>
 

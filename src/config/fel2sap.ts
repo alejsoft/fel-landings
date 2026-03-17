@@ -5,8 +5,9 @@ export const config: ProductConfig = {
   domain: "fel2sap.com",
   erp: "SAP",
   accentColor: "#60a5fa",
+  ogImage: "/og-fel2sap.png",
   hero: {
-    headline: "Tus facturas de proveedores SAT\u00a0GT,",
+    headline: "Tus facturas de compras de proveedores SAT\u00a0GT,",
     highlight: "directo en SAP.",
     subhead:
       "Conexión directa SAT Guatemala → SAP Business One, S/4HANA y ECC. Automático, en tiempo real, sin digitar.",
@@ -22,7 +23,7 @@ export const config: ProductConfig = {
     },
     {
       title: "Cierre mensual atrasado",
-      desc: "Cientos de facturas pendientes de registro al final del mes. El cierre contable se retrasa semana tras semana.",
+      desc: "Cientos de facturas de compras pendientes de registro al final del mes. El cierre contable se retrasa semana tras semana.",
     },
   ],
   steps: [
@@ -61,17 +62,17 @@ export const config: ProductConfig = {
   cta: {
     headline: "¿Usas SAP en Guatemala?",
     subhead:
-      "Eliminamos la digitación manual de facturas de proveedores. Implementación en semanas, no meses.",
+      "Eliminamos la digitación manual de facturas de compras de proveedores. Implementación en semanas, no meses.",
     whatsappMessage:
       "Hola, uso SAP y me interesa automatizar las facturas de compra de la SAT.",
   },
   seo: {
-    title: "Facturas SAT → SAP Automático | Fel2SAP",
+    title: "Facturas de Compras SAT → SAP Automático | Fel2SAP",
     description:
       "Automatiza el registro de facturas de compra de la SAT Guatemala en SAP Business One, S/4HANA y ECC. Cero digitación manual, cero errores. Implementación en 4-8 semanas.",
     keywords: [
       "integración SAT SAP Guatemala",
-      "automatizar facturas SAP",
+      "automatizar facturas de compras SAP",
       "FEL2SAP",
       "DTE SAP Business One",
       "factura electrónica SAP Guatemala",
@@ -83,7 +84,7 @@ export const config: ProductConfig = {
     featureList: [
       "Recepción automática de DTEs desde SAT Guatemala",
       "Compatible con SAP Business One, S/4HANA y ECC",
-      "Facturas de proveedor con líneas de detalle e IVA",
+      "Facturas de compras de proveedor con líneas de detalle e IVA",
       "Notas de crédito y débito automáticas",
       "Validación de NIT contra SAT",
       "Infraestructura AWS",

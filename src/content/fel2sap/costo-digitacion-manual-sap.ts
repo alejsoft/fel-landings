@@ -28,7 +28,7 @@ En SAP el proceso es especialmente lento porque requiere buscar el Business Part
     },
     {
       heading: "El costo en errores",
-      body: `Errores frecuentes al digitar facturas de proveedor en SAP:
+      body: `Errores frecuentes al digitar facturas de compras de proveedor en SAP:
 
 - Business Partner incorrecto asignado
 - Item Code equivocado o genérico en vez del artículo real
@@ -41,9 +41,9 @@ En SAP, corregir una factura de proveedor registrada requiere una nota de crédi
     },
     {
       heading: "El costo en cierre contable",
-      body: `El cierre mensual en SAP depende de que todas las facturas de compra estén registradas. Cuando hay rezago, el balance de cuentas por pagar no cuadra, el libro de compras queda incompleto y la declaración fiscal se atrasa.
+      body: `El cierre mensual en SAP depende de que todas las facturas de compras estén registradas. Cuando hay rezago, el balance de cuentas por pagar no cuadra, el libro de compras queda incompleto y la declaración fiscal se atrasa.
 
-Equipos contables trabajando horas extra al cierre de mes para digitar facturas pendientes es la norma, no la excepción.`,
+Equipos contables trabajando horas extra al cierre de mes para digitar facturas de compras pendientes es la norma, no la excepción.`,
     },
     {
       heading: "La alternativa: registro automático en SAP",

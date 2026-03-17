@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     description: config.seo.description,
     images: [
       {
-        url: `https://${config.domain}/opengraph-image.png`,
+        url: `https://${config.domain}${config.ogImage}`,
         width: 1200,
         height: 630,
         alt: config.seo.title,
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: config.seo.title,
     description: config.seo.description,
-    images: [`https://${config.domain}/opengraph-image.png`],
+    images: [`https://${config.domain}${config.ogImage}`],
   },
 };
 

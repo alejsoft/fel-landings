@@ -5,6 +5,7 @@ export const config: ProductConfig = {
   domain: "fel2gp.com",
   erp: "Dynamics GP",
   accentColor: "#38bdf8",
+  ogImage: "/og-fel2gp.png",
   hero: {
     headline: "Tus facturas de proveedores SAT\u00a0GT,",
     highlight: "directo en Dynamics GP.",
@@ -22,7 +23,7 @@ export const config: ProductConfig = {
     },
     {
       title: "Cierre mensual atrasado",
-      desc: "Cientos de facturas pendientes de registro al final del mes. El cierre contable se retrasa.",
+      desc: "Cientos de facturas de compras pendientes de registro al final del mes. El cierre contable se retrasa.",
     },
   ],
   steps: [
@@ -53,7 +54,7 @@ export const config: ProductConfig = {
     { version: "Dynamics GP 18.x", detail: "eConnect · Web Services" },
   ],
   bigNumbers: [
-    { number: "0", label: "facturas digitadas manualmente" },
+    { number: "0", label: "facturas de comprasdigitadas manualmente" },
     { number: "4–8", label: "semanas de implementación" },
   ],
   cta: {
@@ -69,7 +70,7 @@ export const config: ProductConfig = {
       "Automatiza el registro de facturas de compra de la SAT Guatemala en Microsoft Dynamics GP vía eConnect. Compatible con GP 2016 y 2018. Cero digitación.",
     keywords: [
       "integración SAT Dynamics GP Guatemala",
-      "automatizar facturas Dynamics GP",
+      "automatizar facturas de compras Dynamics GP",
       "FEL2GP",
       "Payables Transaction automático",
       "factura electrónica Dynamics GP Guatemala",

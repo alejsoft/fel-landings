@@ -5,8 +5,9 @@ export const config: ProductConfig = {
   domain: "fel2odoo.com",
   erp: "Odoo",
   accentColor: "#c084fc",
+  ogImage: "/og-fel2odoo.png",
   hero: {
-    headline: "Tus facturas de proveedores SAT\u00a0GT,",
+    headline: "Tus facturas  de compras de proveedores SAT\u00a0GT,",
     highlight: "directo en Odoo.",
     subhead:
       "Conexión directa SAT Guatemala → Odoo v15, v16, v17 y v18. Vendor Bills automáticos, en tiempo real.",
@@ -22,7 +23,7 @@ export const config: ProductConfig = {
     },
     {
       title: "Cierre mensual atrasado",
-      desc: "Cientos de facturas pendientes de registro al final del mes. El cierre contable se retrasa.",
+      desc: "Cientos de facturas de compras pendientes de registro al final del mes. El cierre contable se retrasa.",
     },
   ],
   steps: [
@@ -54,23 +55,23 @@ export const config: ProductConfig = {
     { version: "Odoo v18", detail: "JSON-RPC · Community & Enterprise" },
   ],
   bigNumbers: [
-    { number: "0", label: "facturas digitadas manualmente" },
+    { number: "0", label: "facturas de compras digitadas manualmente" },
     { number: "4–8", label: "semanas de implementación" },
   ],
   cta: {
     headline: "¿Usas Odoo en Guatemala?",
     subhead:
-      "Eliminamos la digitación manual de facturas de proveedores. Vendor Bills automáticos desde la SAT.",
+      "Eliminamos la digitación manual de facturas de compras de proveedores. Vendor Bills automáticos desde la SAT.",
     whatsappMessage:
       "Hola, uso Odoo y me interesa automatizar las facturas de compra de la SAT.",
   },
   seo: {
-    title: "Facturas SAT → Odoo Automático | Fel2Odoo",
+    title: "Facturas de Compras SAT → Odoo Automático | Fel2Odoo",
     description:
-      "Automatiza el registro de facturas de compra de la SAT Guatemala en Odoo. Compatible con v15, v16, v17 y v18. Vendor Bills automáticos, cero digitación.",
+      "Automatiza el registro de facturas de compras de la SAT Guatemala en Odoo. Compatible con v15, v16, v17 y v18. Vendor Bills automáticos, cero digitación.",
     keywords: [
       "integración SAT Odoo Guatemala",
-      "automatizar facturas Odoo",
+      "automatizar facturas de compras Odoo",
       "FEL2ODOO",
       "Vendor Bill automático Odoo",
       "factura electrónica Odoo Guatemala",

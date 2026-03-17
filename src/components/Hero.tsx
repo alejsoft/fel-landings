@@ -57,8 +57,8 @@ export default function Hero() {
           </div>
 
           {/* Right column — Flow animation */}
-          <div className="flex items-center justify-center flex-shrink-0">
-            <div className="w-[270px] h-[368px] sm:w-[306px] sm:h-[417px] lg:w-[360px] lg:h-[490px]">
+          <div className="flex items-center justify-center shrink-0">
+            <div className="w-67.5 h-92 sm:w-76.5 sm:h-104.25 lg:w-90 lg:h-122.5">
               <div className="scale-[0.75] sm:scale-[0.85] lg:scale-100 origin-top-left">
                 <FlujoFEL />
               </div>
