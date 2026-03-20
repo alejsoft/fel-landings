@@ -57,7 +57,11 @@ export default function WhatsAppModal({
     e.preventDefault();
     if (!canSubmit) return;
 
-    const message = `Hola, soy ${name.trim()} (${email.trim()}). Uso ${version} y me interesa una demo de ${config.product}.`;
+    const erpInfo =
+      version === "No estoy seguro"
+        ? `Uso ${config.erp} pero no estoy seguro de la versión`
+        : `Uso ${version}`;
+    const message = `Hola, soy ${name.trim()} (${email.trim()}). ${erpInfo} y me interesa una demo de ${config.product}.`;
     openWhatsApp(message);
     onClose();
     setName("");
