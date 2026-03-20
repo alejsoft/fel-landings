@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { articles, getArticleBySlug } from "@/content";
 import { config } from "@/config";
+import WhatsAppLink from "@/components/WhatsAppLink";
 
 export function generateStaticParams() {
   return articles.map((a) => ({ slug: a.slug }));
@@ -94,12 +95,7 @@ export default async function ArticlePage({
         </div>
 
         <div className="mt-16 pt-8 border-t border-border-subtle">
-          <a
-            href={`https://wa.me/50259819812?text=${encodeURIComponent(config.cta.whatsappMessage)}`}
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            className="inline-flex items-center gap-3 text-accent hover:opacity-70 transition-opacity text-lg font-medium"
-          >
+          <WhatsAppLink className="inline-flex items-center gap-3 text-accent hover:opacity-70 transition-opacity text-lg font-medium">
             Solicitar demo
             <svg
               width="20"
@@ -115,7 +111,7 @@ export default async function ArticlePage({
               <line x1="5" y1="12" x2="19" y2="12" />
               <polyline points="12 5 19 12 12 19" />
             </svg>
-          </a>
+          </WhatsAppLink>
         </div>
       </article>
     </main>

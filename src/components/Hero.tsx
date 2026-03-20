@@ -3,6 +3,7 @@
 
 import dynamic from "next/dynamic";
 import { config } from "@/config";
+import { useWhatsApp } from "./WhatsAppProvider";
 
 const FlujoFEL = dynamic(() => import("./FlujoFEL"), {
   ssr: false,
@@ -10,6 +11,7 @@ const FlujoFEL = dynamic(() => import("./FlujoFEL"), {
 });
 
 export default function Hero() {
+  const openModal = useWhatsApp();
   return (
     <section className="min-h-screen flex flex-col justify-center px-4 sm:px-8 pt-20 sm:pt-0">
       <div className="max-w-6xl mx-auto w-full">
@@ -31,11 +33,9 @@ export default function Hero() {
             </p>
 
             <div className="mt-6 sm:mt-12">
-              <a
-                href={`https://wa.me/50259819812?text=${encodeURIComponent(config.cta.whatsappMessage)}`}
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                className="inline-flex items-center gap-3 text-accent hover:opacity-70 transition-opacity text-lg font-medium"
+              <button
+                onClick={openModal}
+                className="inline-flex items-center gap-3 text-accent hover:opacity-70 transition-opacity text-lg font-medium cursor-pointer"
               >
                 Ver demo
                 <svg
@@ -52,7 +52,7 @@ export default function Hero() {
                   <line x1="5" y1="12" x2="19" y2="12" />
                   <polyline points="12 5 19 12 12 19" />
                 </svg>
-              </a>
+              </button>
             </div>
           </div>
 

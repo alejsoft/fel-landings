@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import Image from "next/image";
 import { config } from "@/config";
 import ThemeToggle from "@/components/ThemeToggle";
+import WhatsAppProvider from "@/components/WhatsAppProvider";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -87,7 +88,9 @@ export default function RootLayout({
           <ThemeToggle />
         </header>
 
-        {children}
+        <WhatsAppProvider>
+          {children}
+        </WhatsAppProvider>
 
         {/* Minimal footer */}
         <footer className="px-6 sm:px-8 py-12 flex flex-col items-center gap-3">

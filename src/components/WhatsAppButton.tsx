@@ -1,21 +1,14 @@
 "use client";
 
-import { config } from "@/config";
-
-const WHATSAPP_NUMBER = "50259819812";
-const ENCODED = encodeURIComponent(config.cta.whatsappMessage);
-const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${ENCODED}`;
+import { useWhatsApp } from "./WhatsAppProvider";
 
 export default function WhatsAppButton() {
-  const handleClick = () => {
-    const isMobile = /android|iphone|ipad|ipod/i.test(navigator.userAgent);
-    window.open(WHATSAPP_URL, isMobile ? "_self" : "_blank");
-  };
+  const openModal = useWhatsApp();
 
   return (
     <div className="fixed bottom-6 right-6 z-50">
       <button
-        onClick={handleClick}
+        onClick={openModal}
         className="flex h-14 w-14 cursor-pointer items-center justify-center rounded-full border-none bg-[#25D366] shadow-lg shadow-[#25D366]/25 ring-2 ring-[#25D366]/30 ring-offset-2 ring-offset-background transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-[#25D366]/30"
         aria-label="Contactar por WhatsApp"
       >
