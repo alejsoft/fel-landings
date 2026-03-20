@@ -22,8 +22,11 @@ const product = process.env.NEXT_PUBLIC_PRODUCT || "fel2sap";
 const versions = VERSIONS[product] || [];
 
 function openWhatsApp(message: string) {
-  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+  const encoded = encodeURIComponent(message);
   const isMobile = /android|iphone|ipad|ipod/i.test(navigator.userAgent);
+  const url = isMobile
+    ? `https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`
+    : `https://web.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encoded}`;
   window.open(url, isMobile ? "_self" : "_blank");
 }
 
