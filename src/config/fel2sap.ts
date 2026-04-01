@@ -4,7 +4,7 @@ export const config: ProductConfig = {
   product: "Fel2SAP",
   domain: "fel2sap.com",
   erp: "SAP",
-  accentColor: "#60a5fa",
+  accentColor: "#2563eb",
   ogImage: "/og-fel2sap.png",
   hero: {
     headline: "Tus facturas de compras de proveedores SAT\u00a0GT,",

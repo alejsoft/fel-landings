@@ -4,7 +4,7 @@ export const config: ProductConfig = {
   product: "Fel2GP",
   domain: "fel2gp.com",
   erp: "Dynamics GP",
-  accentColor: "#38bdf8",
+  accentColor: "#0284c7",
   ogImage: "/og-fel2gp.png",
   hero: {
     headline: "Tus facturas de proveedores SAT\u00a0GT,",
