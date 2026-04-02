@@ -8,6 +8,19 @@ import CTA from "@/components/CTA";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { config } from "@/config";
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "HaaB Technologies, S.A.",
+  url: `https://${config.domain}`,
+  logo: `https://${config.domain}/haab-light.webp`,
+  sameAs: ["https://haab.gt"],
+  address: {
+    "@type": "PostalAddress",
+    addressCountry: "GT",
+  },
+};
+
 const softwareSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -21,11 +34,7 @@ const softwareSchema = {
     priceCurrency: "GTQ",
   },
   featureList: config.schema.featureList,
-  provider: {
-    "@type": "Organization",
-    name: "HaaB Technologies, S.A.",
-    url: `https://${config.domain}`,
-  },
+  provider: organizationSchema,
 };
 
 const faqSchema = {
@@ -45,6 +54,10 @@ const faqSchema = {
 export default function Home() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}

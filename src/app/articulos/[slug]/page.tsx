@@ -50,11 +50,47 @@ export default async function ArticlePage({
     headline: article.title,
     description: article.description,
     datePublished: article.publishedDate,
+    dateModified: article.publishedDate,
+    inLanguage: "es-GT",
+    author: {
+      "@type": "Organization",
+      name: "HaaB Technologies, S.A.",
+      url: `https://${config.domain}`,
+    },
     publisher: {
       "@type": "Organization",
       name: "HaaB Technologies, S.A.",
       url: `https://${config.domain}`,
     },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://${config.domain}/articulos/${article.slug}`,
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Inicio",
+        item: `https://${config.domain}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Artículos",
+        item: `https://${config.domain}/articulos`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: article.title,
+        item: `https://${config.domain}/articulos/${article.slug}`,
+      },
+    ],
   };
 
   return (
@@ -62,6 +98,10 @@ export default async function ArticlePage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <article className="max-w-3xl mx-auto">
         <p className="text-sm tracking-widest uppercase text-muted mb-4">

@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { Building2, BadgeCheck } from "lucide-react";
 
 const ICON_R = 22;
@@ -25,12 +22,9 @@ function Node({
   const isHorizontal = labelSide === "left" || labelSide === "right";
 
   return (
-    <motion.div
+    <div
       className="absolute"
-      style={{ left: x, top: y }}
-      initial={{ opacity: 0, scale: 0.7 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ delay, duration: 0.5, ease: "easeOut" }}
+      style={{ left: x, top: y, animation: `fel-node-enter 0.5s ease-out ${delay}s both` }}
     >
       <div
         className={`flex items-center ${isHorizontal ? "flex-row gap-2" : "flex-col gap-1"} ${labelSide === "left" ? "flex-row-reverse" : ""}`}
@@ -43,7 +37,7 @@ function Node({
           {label}
         </span>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
@@ -58,33 +52,30 @@ function AvatarIcon({ className }: { className?: string }) {
 
 function SatNode({ delay, x, y }: { delay: number; x: number; y: number }) {
   return (
-    <motion.div
+    <div
       className="absolute"
-      style={{ left: x, top: y }}
-      initial={{ opacity: 0, scale: 0.7 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ delay, duration: 0.5, ease: "easeOut" }}
+      style={{ left: x, top: y, animation: `fel-node-enter 0.5s ease-out ${delay}s both` }}
     >
       <span className="font-mono text-sm font-bold text-sap-blue tracking-wide whitespace-nowrap block" style={{ transform: "translateX(-50%)" }}>
         SAT GT
       </span>
-    </motion.div>
+    </div>
   );
 }
 
 /* Línea que aparece dibujándose */
 function AnimatedLine({ d, delay, duration = 0.6, width = 1.5, opacity = 1 }: { d: string; delay: number; duration?: number; width?: number; opacity?: number }) {
   return (
-    <motion.path
+    <path
       d={d}
       fill="none"
       stroke="currentColor"
       strokeWidth={width}
       opacity={opacity}
       className="text-gray-300 dark:text-gray-600"
-      initial={{ pathLength: 0 }}
-      animate={{ pathLength: 1 }}
-      transition={{ delay, duration, ease: "easeInOut" }}
+      pathLength={1}
+      strokeDasharray={1}
+      style={{ strokeDashoffset: 1, animation: `fel-draw-line ${duration}s ease-in-out ${delay}s forwards` }}
     />
   );
 }
@@ -120,41 +111,31 @@ function NeuralParticle({ path, delay, duration, size = 2.5, opacity = 0.9 }: { 
 
 function HaabNode({ delay, x, y }: { delay: number; x: number; y: number }) {
   return (
-    <motion.div
+    <div
       className="absolute"
-      style={{ left: x, top: y }}
-      initial={{ opacity: 0, scale: 0.7 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ delay, duration: 0.5, ease: "easeOut" }}
+      style={{ left: x, top: y, animation: `fel-node-enter 0.5s ease-out ${delay}s both` }}
     >
       <div className="flex flex-col items-center gap-1" style={{ transform: "translateX(-50%)" }}>
-        <motion.div
+        <div
           className="w-9 h-9 rounded-full overflow-hidden shrink-0"
-          animate={{
-            boxShadow: ["0 0 0px rgba(34,197,94,0.2)", "0 0 20px rgba(34,197,94,0.6)", "0 0 0px rgba(34,197,94,0.2)"],
-            opacity: [1, 0.7, 1],
-          }}
-          transition={{ delay: delay + 0.5, duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+          style={{ animation: `fel-glow-pulse 2.5s ease-in-out ${delay + 0.5}s infinite both` }}
         >
           <img src="/icon-192.webp" alt="HaaB" className="w-full h-full object-cover dark:hidden" />
           <img src="/icon-192-dark.webp" alt="HaaB" className="w-full h-full object-cover hidden dark:block" />
-        </motion.div>
+        </div>
         <span className="font-mono text-[0.6rem] tracking-wide text-green-600 dark:text-green-400 font-semibold">
           HaaB
         </span>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
 function ErpDot({ color, label, delay, x, y }: { color: string; label: string; delay: number; x: number; y: number }) {
   return (
-    <motion.div
+    <div
       className="absolute"
-      style={{ left: x, top: y }}
-      initial={{ opacity: 0, scale: 0 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ delay, duration: 0.4, ease: "backOut" }}
+      style={{ left: x, top: y, animation: `fel-erp-enter 0.4s cubic-bezier(0.34,1.56,0.64,1) ${delay}s both` }}
     >
       <div
         className={`w-7 h-7 rounded-full flex items-center justify-center ${label === "+" ? "border-2 border-gray-400 dark:border-gray-500 bg-transparent" : "border border-border-subtle"}`}
@@ -162,13 +143,12 @@ function ErpDot({ color, label, delay, x, y }: { color: string; label: string; d
       >
         <span className={`font-mono text-[0.45rem] font-bold ${label === "+" ? "text-gray-400 dark:text-gray-500" : "text-white"}`}>{label}</span>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
 function FloatingParticles({ cx, startY, endY, delay }: { cx: number; startY: number; endY: number; delay: number }) {
   const midY = (startY + endY) / 2;
-  const rangeY = (endY - startY) / 2 - 4;
 
   const particles = [
     { x: cx - 10, y: midY - 8,  dx: 6,   dy: -10, dur: 2.8, begin: 0 },
@@ -237,7 +217,6 @@ export default function FlujoFEL() {
   const haabBottom = { x: cx, y: pos.haab.y + 36 + 14 + 4 };
 
   // Curves
-  const midY1 = (provBottom.y + portalTop.y) / 2;
   const midY2 = (portalBottom.y + satTop.y) / 2;
   const midY3 = (haabBottom.y + erpY) / 2;
 
@@ -261,7 +240,6 @@ export default function FlujoFEL() {
   }));
   const pathPortalToSat = `M ${portalBottom.x} ${portalBottom.y} C ${portalBottom.x} ${midY2} ${cx} ${midY2} ${cx} ${satTop.y}`;
   const pathCertifToSat = `M ${certifBottom.x} ${certifBottom.y} C ${certifBottom.x} ${midY2} ${cx} ${midY2} ${cx} ${satTop.y}`;
-  const pathSatToHaab = `M ${satBottom.x} ${satBottom.y} L ${haabTop.x} ${haabTop.y}`;
 
   const erpPaths = erpDots.map(dot =>
     `M ${cx} ${haabBottom.y} C ${cx} ${midY3} ${dot.x} ${midY3} ${dot.x} ${erpY}`
@@ -340,12 +318,9 @@ export default function FlujoFEL() {
 
       {/* Nodos */}
       {/* Proveedor con avatar custom */}
-      <motion.div
+      <div
         className="absolute"
-        style={{ left: pos.proveedor.x, top: pos.proveedor.y - 25 }}
-        initial={{ opacity: 0, scale: 0.7 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0, duration: 0.5, ease: "easeOut" }}
+        style={{ left: pos.proveedor.x, top: pos.proveedor.y - 25, animation: "fel-node-enter 0.5s ease-out 0s both" }}
       >
         <div className="flex flex-col items-center gap-1" style={{ transform: "translateX(-50%)" }}>
           <div className="w-11 h-11 rounded-full border border-gray-400 dark:border-border-subtle bg-surface flex items-center justify-center overflow-hidden text-black dark:text-gray-300">
@@ -355,7 +330,7 @@ export default function FlujoFEL() {
             Proveedor
           </span>
         </div>
-      </motion.div>
+      </div>
       <Node icon={Building2} label="Portal SAT" delay={1.2} x={pos.portal.x} y={pos.portal.y} color="text-sap-blue" labelSide="left" />
       <Node icon={BadgeCheck} label="Certificador" delay={1.2} x={pos.certif.x} y={pos.certif.y} labelSide="right" />
       <SatNode delay={2.7} x={pos.sat.x} y={pos.sat.y} />

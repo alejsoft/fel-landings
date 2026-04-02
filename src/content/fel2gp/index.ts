@@ -9,6 +9,8 @@ import { article as facturaDocumentoContable } from "./factura-compra-documento-
 import { article as facturaElectronicaFel } from "./factura-electronica-fel-guatemala";
 import { article as facturaEspecial } from "./factura-especial-guatemala";
 import { article as informeComprasVentas } from "./informe-electronico-compras-ventas";
+import { article as softwareRecepcion } from "./software-recepcion-facturas-compras";
+import { article as automatizacionCompras } from "./automatizacion-proceso-compras";
 
 export const articles = [
   costoDigitacion,
@@ -22,4 +24,6 @@ export const articles = [
   facturaElectronicaFel,
   facturaEspecial,
   informeComprasVentas,
+  softwareRecepcion,
+  automatizacionCompras,
 ];

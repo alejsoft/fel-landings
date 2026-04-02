@@ -1,14 +1,9 @@
 // src/components/Hero.tsx
 "use client";
 
-import dynamic from "next/dynamic";
 import { config } from "@/config";
 import { useWhatsApp } from "./WhatsAppProvider";
-
-const FlujoFEL = dynamic(() => import("./FlujoFEL"), {
-  ssr: false,
-  loading: () => <div className="w-67.5 h-92 sm:w-76.5 sm:h-104.25 lg:w-90 lg:h-122.5" />,
-});
+import FlujoFEL from "./FlujoFEL";
 
 export default function Hero() {
   const openModal = useWhatsApp();
@@ -18,9 +13,12 @@ export default function Hero() {
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 lg:gap-8">
           {/* Left column — Text */}
           <div className="flex-1 max-w-2xl">
-            <p className="text-sm tracking-widest uppercase text-muted mb-4 sm:mb-8">
-              {config.product}
-            </p>
+            <div className="flex items-center gap-3 mb-4 sm:mb-8">
+              <div className="h-px w-8 sm:w-12 bg-accent" />
+              <span className="text-xs tracking-widest uppercase text-muted">
+                HaaB Technologies, S.A.
+              </span>
+            </div>
 
             <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1] tracking-tight">
               {config.hero.headline}

@@ -1,0 +1,52 @@
+# HaaB Technologies — Automatización de Facturas de Compras SAT Guatemala
+
+> HaaB Technologies, S.A. desarrolla software que automatiza el registro de facturas de compras (DTEs) desde la SAT de Guatemala directamente en ERPs empresariales. Sin OCR, sin RPA, sin digitación manual — lectura directa del XML del DTE.
+
+## Productos
+
+- **Fel2SAP** (fel2sap.com): Integración SAT Guatemala → SAP Business One, S/4HANA y ECC. Factura de proveedor automática vía Service Layer y DI API.
+- **Fel2GP** (fel2gp.com): Integración SAT Guatemala → Microsoft Dynamics GP 2016, 2018 y 18.x. Payables Transaction automático vía eConnect.
+- **Fel2Odoo** (fel2odoo.com): Integración SAT Guatemala → Odoo v15 a v18. Vendor Bill automático vía XML-RPC.
+
+## Cómo funciona
+
+1. El proveedor emite factura electrónica → la SAT certifica el DTE como XML.
+2. HaaB recibe el DTE en tiempo real desde la SAT (push, no polling).
+3. Se valida el XML, se extraen líneas de detalle, impuestos y datos del proveedor.
+4. Se crea el documento de compra automáticamente en el ERP con todas sus líneas, IVA y referencia al DTE.
+
+## Modalidades de conexión
+
+- **API Gateway**: El ERP consume la API REST de HaaB en AWS. Ideal para ERPs en la nube.
+- **Peer-to-peer**: Conexión directa desde la webapp de HaaB al servidor del tenant. Ideal para ERPs on-premise.
+
+## Páginas principales
+
+- /: Landing principal del producto
+- /articulos: Índice de artículos técnicos
+- /rpa-vs-integracion: Comparativa RPA vs integración directa API
+
+## Artículos
+
+- /articulos/automatizacion-proceso-compras — Automatización del proceso de compras: qué se puede automatizar
+- /articulos/software-recepcion-facturas-compras — Software de recepción de facturas de compras
+- /articulos/costo-digitacion-manual-sap — Cuánto le cuesta a tu empresa digitar facturas de compra manualmente
+- /articulos/automatizar-facturas-proveedor-sap — Cómo automatizar facturas de proveedor desde la SAT Guatemala
+- /articulos/facturas-de-compras-que-son-tipos — Facturas de compras: qué son, qué tipos existen y cómo gestionarlas
+- /articulos/registro-autorizacion-facturas-compras — Registro y autorización de facturas de compras en Guatemala
+- /articulos/retenciones-isr-facturas-compras-guatemala — Retenciones de ISR en facturas de compras: guía práctica
+- /articulos/omisos-sat-como-verificar-proveedores-guatemala — Omisos ante la SAT: qué son y cómo verificar proveedores
+- /articulos/libro-de-compras-guatemala-que-es — Libro de compras en Guatemala: qué es y cómo mantenerlo al día
+- /articulos/factura-de-compra-como-documento-contable — La factura de compra como documento contable
+- /articulos/factura-electronica-fel-guatemala-que-es — Factura electrónica FEL en Guatemala: qué es y cómo funciona
+- /articulos/factura-especial-guatemala-que-es-cuando-emitirla — Factura Especial en Guatemala: qué es y cuándo emitirla
+- /articulos/informe-electronico-compras-ventas-sat-guatemala — Informe Electrónico de Compras y Ventas SAT
+
+## Datos clave
+
+- País: Guatemala
+- Autoridad tributaria: SAT (Superintendencia de Administración Tributaria)
+- Formato de factura electrónica: DTE (Documento Tributario Electrónico) en XML
+- Infraestructura: AWS
+- Empresa: HaaB Technologies, S.A.
+- Idioma del sitio: Español (es-GT)
