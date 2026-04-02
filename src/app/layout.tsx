@@ -51,7 +51,7 @@ export default function RootLayout({
     <html
       lang="es-GT"
       suppressHydrationWarning
-      style={{ "--accent": config.accentColor } as React.CSSProperties}
+      style={{ "--accent-light": config.accentColor, "--accent-dark": config.accentColorDark } as React.CSSProperties}
     >
       <head>
         <script

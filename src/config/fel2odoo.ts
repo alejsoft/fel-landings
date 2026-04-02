@@ -5,6 +5,7 @@ export const config: ProductConfig = {
   domain: "fel2odoo.com",
   erp: "Odoo",
   accentColor: "#9333ea",
+  accentColorDark: "#c084fc",
   ogImage: "/og-fel2odoo.png",
   hero: {
     headline: "Tus facturas  de compras de proveedores SAT\u00a0GT,",
