@@ -5,6 +5,7 @@ import { config } from "@/config";
 import ThemeToggle from "@/components/ThemeToggle";
 import WhatsAppLink from "@/components/WhatsAppLink";
 import WhatsAppProvider from "@/components/WhatsAppProvider";
+import GclidCapture from "@/components/GclidCapture";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -55,6 +56,18 @@ export default function RootLayout({
       style={{ "--accent-light": config.accentColor, "--accent-dark": config.accentColorDark } as React.CSSProperties}
     >
       <head>
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+        <link rel="preconnect" href="https://www.googleadservices.com" />
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-664214993"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.gtag=gtag;gtag('js',new Date());gtag('config','AW-664214993')`,
+          }}
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var t=localStorage.getItem("theme");if(t==="dark"||(t!=="light"&&matchMedia("(prefers-color-scheme:dark)").matches))document.documentElement.classList.add("dark")}catch(e){}})()`,
@@ -94,13 +107,14 @@ export default function RootLayout({
               RPA vs API
             </a>
             <ThemeToggle />
-            <WhatsAppLink className="hidden sm:inline-flex items-center px-4 py-2 rounded-lg bg-accent text-white text-sm font-medium hover:opacity-90 transition-opacity">
+            <WhatsAppLink className="hidden sm:inline-flex items-center px-4 py-2 rounded-lg bg-accent text-white dark:text-background text-sm font-medium hover:opacity-90 transition-opacity">
               Solicitar Demo
             </WhatsAppLink>
           </div>
         </header>
 
         <WhatsAppProvider>
+          <GclidCapture />
           {children}
         </WhatsAppProvider>
 

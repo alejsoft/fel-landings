@@ -19,7 +19,7 @@ export default function CTA() {
           </p>
           <button
             onClick={openModal}
-            className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-accent text-white font-medium hover:opacity-90 transition-opacity cursor-pointer"
+            className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-accent text-white dark:text-background font-medium hover:opacity-90 transition-opacity cursor-pointer"
           >
             Escribir por WhatsApp
             <svg

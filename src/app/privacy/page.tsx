@@ -160,7 +160,37 @@ export default function PrivacyPolicy() {
             </p>
           </Section>
 
-          <Section number="11" title="Cómo contactarnos">
+          <Section number="11" title="Google Ads y publicidad">
+            <p>
+              Usamos Google Ads para medir la efectividad de nuestras campañas y para remarketing dirigido
+              a usuarios que ya visitaron nuestro sitio. Esto implica que Google puede recopilar datos sobre
+              su navegación (ID de clic, páginas vistas, dispositivo) para atribuir conversiones y mostrar
+              anuncios relevantes en propiedades de Google y su red de display.
+            </p>
+            <p className="mt-3">
+              Puede desactivar la personalización de anuncios de Google en cualquier momento desde{" "}
+              <a
+                href="https://adssettings.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent hover:underline"
+              >
+                adssettings.google.com
+              </a>
+              . Para más información sobre cómo Google usa los datos publicitarios, consulte{" "}
+              <a
+                href="https://policies.google.com/technologies/ads"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent hover:underline"
+              >
+                policies.google.com/technologies/ads
+              </a>
+              .
+            </p>
+          </Section>
+
+          <Section number="12" title="Cómo contactarnos">
             <p>
               Comuníquese con nosotros si tiene alguna pregunta a través de{" "}
               <WhatsAppLink className="text-accent hover:underline inline">

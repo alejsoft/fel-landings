@@ -3,6 +3,7 @@
 
 import { useState } from "react";
 import { config } from "@/config";
+import { fireConversion, getStoredGclid } from "@/lib/gads";
 
 const WHATSAPP_NUMBER = "50259819812";
 
@@ -61,8 +62,16 @@ export default function WhatsAppModal({
       version === "No estoy seguro"
         ? `Uso ${config.erp} pero no estoy seguro de la versión`
         : `Uso ${version}`;
-    const message = `Hola, soy ${name.trim()} (${email.trim()}). ${erpInfo} y me interesa una demo de ${config.product}.`;
-    openWhatsApp(message);
+    const gclid = getStoredGclid();
+    const refSuffix = gclid ? ` [ref:${gclid}]` : "";
+    const message = `Hola, soy ${name.trim()} (${email.trim()}). ${erpInfo} y me interesa una demo de ${config.product}.${refSuffix}`;
+
+    fireConversion({
+      email: email.trim(),
+      firstName: name.trim(),
+      onComplete: () => openWhatsApp(message),
+    });
+
     onClose();
     setName("");
     setEmail("");
@@ -148,7 +157,7 @@ export default function WhatsAppModal({
           <button
             type="submit"
             disabled={!canSubmit}
-            className="flex-1 rounded-lg bg-accent px-4 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90 disabled:opacity-40 cursor-pointer disabled:cursor-not-allowed"
+            className="flex-1 rounded-lg bg-accent px-4 py-2.5 text-sm font-medium text-white dark:text-background transition-opacity hover:opacity-90 disabled:opacity-40 cursor-pointer disabled:cursor-not-allowed"
           >
             Abrir WhatsApp
           </button>
