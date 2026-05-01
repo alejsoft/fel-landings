@@ -57,16 +57,14 @@ export default function RootLayout({
     >
       <head>
         <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://www.google-analytics.com" />
-        <link rel="preconnect" href="https://www.googleadservices.com" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.gtag=gtag;gtag('consent','default',{ad_storage:'denied',analytics_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});gtag('js',new Date());gtag('config','AW-664214993',{send_page_view:false})`,
+          }}
+        />
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=AW-664214993"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.gtag=gtag;gtag('js',new Date());gtag('config','AW-664214993')`,
-          }}
         />
         <script
           dangerouslySetInnerHTML={{
