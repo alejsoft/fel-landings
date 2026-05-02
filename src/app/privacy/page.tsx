@@ -175,7 +175,7 @@ export default function PrivacyPolicy() {
                 rel="noopener noreferrer"
                 className="text-accent hover:underline"
               >
-                adssettings.google.com
+                la configuración de anuncios de Google
               </a>
               . Para más información sobre cómo Google usa los datos publicitarios, consulte{" "}
               <a
@@ -184,7 +184,7 @@ export default function PrivacyPolicy() {
                 rel="noopener noreferrer"
                 className="text-accent hover:underline"
               >
-                policies.google.com/technologies/ads
+                la política de publicidad de Google
               </a>
               .
             </p>

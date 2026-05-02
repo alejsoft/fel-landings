@@ -119,6 +119,9 @@ export default function WhatsAppModal({
             placeholder="tu@empresa.com"
             className="w-full rounded-lg border border-border-subtle bg-background px-4 py-2.5 text-sm outline-none focus:border-accent transition-colors"
           />
+          <p className="text-xs text-muted mt-1">
+            Solo aceptamos correos del dominio de tu empresa — no Gmail, Hotmail, Yahoo ni similares.
+          </p>
           {email && !isValidEmail && (
             <p className="text-xs text-red-400 mt-1">
               Ingresá un correo empresarial
